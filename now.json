@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "name":  "API_Social"  ,
+    "builds": [
+        {"src": "/src/index.js", "use": "@now/node-server"}
+    ],
+    "routes": [
+        {"src": "/(.*)", "dest": "/src/index.js"}
+    ],
+    "env":{
+        "HOST_DB": "@task-host-db",
+        "PORT_DB": "@task-port-db",
+        "DATABASE_DB": "@task-database-db",
+        "USER_DB": "@task-user-db",
+        "PASSWORD_DB": "@task-password-db",
+        "SECRET_KEY": "@task-secret-key"
+    }
+}

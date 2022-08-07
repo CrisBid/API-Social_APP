@@ -1,0 +1,12 @@
+  
+  
+  knex migrate:make create_table_user 
+
+  knex migrate:latest 
+
+  now secrets add task-host-db 'kesavan.db.elephantsql.com' && 
+  now secrets add task-port-db '5432' && 
+  now secrets add task-database-db 'asspxfvg' &&
+  now secrets add task-user-db 'asspxfvg' &&
+  now secrets add task-password-db '4o4RwoZzgqmXNTAchE7GNNqG1H0zX9wU' &&
+  now secrets add task-secret-key '4o4RwoZzgqmXNTAchE7GNNqG1H0zX9wU'

@@ -1,0 +1,23 @@
+type Group {
+    id: String!
+    name: String!
+    description: String
+    id_user_adm: String!
+}
+
+input GroupInput{
+    name: String!
+    description: String
+    id_user_adm: String!
+}
+
+type Query{      
+    Groups: [Group]
+    Group(id: String!):Group!
+}
+
+type Mutation {
+    createGroup(input: GroupInput!): Group
+    deleteGroup(id: String!): Group
+    deleteAllGroup: Group
+}

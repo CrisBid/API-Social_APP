@@ -1,0 +1,29 @@
+type GroupsMsg {
+    id: String!
+    id_user: String!
+    id_group: String!
+    name_user: String
+    level_user: String!
+    send_status: Int!
+    conteudo_msg: String
+}
+
+input GroupsMsgInput{
+    id_user: String!
+    id_group: String!
+    name_user: String
+    level_user: String!
+    send_status: Int!
+    conteudo_msg: String
+}
+
+type Query{      
+    GroupsMsgs: [GroupsMsg]
+    GroupsMsg(id: String!):GroupsMsg!
+}
+
+type Mutation {
+    createGroupsMsg(input: UserInput!): GroupsMsg
+    deleteGroupsMsg(id: String!): GroupsMsg
+    deleteAllGroupsMsg: GroupsMsg
+}
