@@ -3,6 +3,7 @@
   "version": "1",
   "description": "backend test",
   "repository": "localhost",
+  "main": "src/index.js",
   "author": "CrisBid",
   "license": "MIT",
   "scripts": {
