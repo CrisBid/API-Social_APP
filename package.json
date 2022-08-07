@@ -6,8 +6,6 @@
   "author": "CrisBid",
   "license": "MIT",
   "scripts": {
-    "knex": "babel-node -r dotenv/config node_modules/.bin/knex",
-    "test:knex": "DOTENV_CONFIG_PATH=.env.test npm run knex",
     "start": "cd src && knex migrate:latest && cd .. && babel-node src/index.js",
     "dev": "nodemon --exec babel-node src/index.js -e js,gql"
   },
